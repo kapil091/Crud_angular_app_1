@@ -11,6 +11,7 @@ export class AddPersonComponent implements OnInit {
   addPersonForm!: FormGroup;
   file: any;
   url: string | ArrayBuffer;
+  peopleListArray:any=[];
   
   constructor(private formBuilder: FormBuilder) { }
 
@@ -41,5 +42,15 @@ export class AddPersonComponent implements OnInit {
   submit(){
     if(!this.addPersonForm.invalid)
     console.log(this.addPersonForm.value);
+    let obj ={
+      'avatar':this.addPersonForm.value.avatar,
+      'dob': this.addPersonForm.value.dob,
+      'email': this.addPersonForm.value.email,
+      'name':this.addPersonForm.value.name
+    }
+    this.peopleListArray.push(obj);
+    console.log(this.peopleListArray);
+   localStorage.setItem('peopleList',JSON.stringify(this.peopleListArray));
+   this.addPersonForm.reset();
   }
 }

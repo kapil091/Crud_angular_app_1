@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list-of-people.component.scss']
 })
 export class ListOfPeopleComponent implements OnInit {
+  peopleArray:any=[];
 
   constructor() { }
 
   ngOnInit(): void {
+   this.peopleArray = JSON.parse( localStorage.getItem('peopleList'));
   }
 
 }

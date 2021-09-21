@@ -1,2 +1,32 @@
 <app-navbar></app-navbar>
-<app-add-person></app-add-person>
+<!-- <app-add-person></app-add-person> -->
+<!-- <div  *ngFor="let person of peopleArray">
+    {{person.name}}
+    
+</div> -->
+
+<div class="container-fluid p-5">
+    <div class="py-1">
+        <div class="card">
+            <div class="list-container bg-light" >
+                <div class="person" *ngFor="let person of peopleArray">
+                    <mat-card class="example-card">
+                        <mat-card-header>
+                          <div mat-card-avatar class="example-header-image"></div>
+                          <mat-card-title>{{person.name}}</mat-card-title>
+                        </mat-card-header>
+                        <img mat-card-image src="{{person.avatar}}" alt="Photo of a Shiba Inu">
+                        
+                        <mat-card-content>
+                          <p>
+                            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                            bred for hunting.
+                          </p>
+                        </mat-card-content>
+                      </mat-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

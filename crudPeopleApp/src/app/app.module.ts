@@ -14,6 +14,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { NgxMatFileInputModule } from '@angular-material-components/file-input';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { NgxMatFileInputModule } from '@angular-material-components/file-input';
     FormsModule,
     ReactiveFormsModule,
     MatInputModule,
-    NgxMatFileInputModule
+    NgxMatFileInputModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

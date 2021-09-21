@@ -1,0 +1,15 @@
+.navbar{
+    top: 0;
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    overflow:hidden;
+    z-index: 300;
+
+    &-brand{
+        width: 100%;
+        font-weight: bold;
+        color: rgb(208, 231, 233);
+        text-align: center;
+    }
+}
